@@ -1,0 +1,55 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light" />
+
+    <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+    <style name="NoSpaceActionBarTheme" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="HoriticalStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+        <item name="android:background">#e1e1e1</item>
+    </style>
+
+    <style name="VerticalStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">1.0dip</item>
+        <item name="android:background">#e1e1e1</item>
+    </style>
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
+    </style>
+
+
+    <style name="MySwitch" parent="Theme.AppCompat.Light">
+        <!--开启时的颜色-->
+        <item name="colorControlActivated">@color/color_00C1FF</item>
+        <!--关闭时的颜色-->
+        <item name="colorSwitchThumbNormal">@color/color_e0e0e0</item>
+        <!--关闭时的轨迹颜色取30%的颜色-->
+        <item name="android:colorForeground">@color/color_e0e0e0</item>
+    </style>
+    <style name="fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fab_slide_in_from_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/fab_slide_in_from_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fab_slide_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/fab_slide_in_from_left</item>
+    </style>
+    <style name="Anim_fade" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/fade</item>
+    </style>
+</resources>

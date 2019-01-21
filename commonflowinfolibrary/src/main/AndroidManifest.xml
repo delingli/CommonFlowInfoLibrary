@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ldl.flowinfo">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name=".activity.ChargingInfoActivity"
+            android:configChanges="layoutDirection|fontScale|locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name="com.sant.chafer.ChaferBrowser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChargSetActivity"
+            android:configChanges="layoutDirection|fontScale|locale"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"
+        ></activity>
+    </application>
+
+</manifest>

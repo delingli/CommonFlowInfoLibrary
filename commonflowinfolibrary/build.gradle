@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+def REPO_URL = 'http://172.18.0.20:8080/repos'
+def GROUP_ID = 'com.stkj.lib'
+def ARTIFACT = 'commonflowinfo'
+def VERSION_CODE = 6
+def VERSION_NAME = '1.0.6'
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: REPO_URL)
+        pom.groupId = GROUP_ID
+        pom.artifactId = ARTIFACT
+        pom.version = VERSION_NAME
+    }
+}
+
+android {
+    compileSdkVersion 25
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:25.4.0'
+    implementation 'com.android.support:appcompat-v7:25.4.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test:rules:0.2'
+    implementation('com.stkj.lib:gdt-new-library:1.4.4')
+    implementation('com.stkj.lib:chafer:1.4.3') {
+        exclude group: 'com.android.support'
+//        exclude group: 'com.umeng.analytics'
+    }
+    implementation 'com.stkj.lib:sdkuilib:1.2.8'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.android.support:gridlayout-v7:25.4.0'
+}
+
