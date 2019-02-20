@@ -9,7 +9,7 @@
         style="@style/NoSpaceActionBarTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="#1e73a9"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -80,6 +80,7 @@
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dismens_14" />
 

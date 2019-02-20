@@ -1,1 +1,1 @@
-include ':app', ':commonflowinfolibrary'
+include ':app', ':commonflowinfolibrary', ':lockscreeninfolibrary'
